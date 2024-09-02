@@ -1,0 +1,188 @@
+// .container {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between; /* Adjust this based on your layout preference */
+// }
+
+// .mat-card {
+//     flex: 0 0 calc(33.33% - 10px); /* Set flex-basis to occupy 33.33% of the container width, adjust margin as needed */
+//     margin-bottom: 20px; /* Optional: Add margin between cards */
+// }
+
+// .card-container {
+//     width: 300px;
+// }
+
+// .mat-card {
+//     border-radius: 10px;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+// }
+
+// .mat-card-content {
+//     padding: 16px;
+// }
+
+// img {
+//     border-top-left-radius: 10px;
+//     border-top-right-radius: 10px;
+//     object-fit: cover;
+//     height: 200px;
+//     width: 100%;
+// }
+
+// h1, h2 {
+//     margin-top: 8px;
+//     margin-bottom: 8px;
+// }
+
+// h2 {
+//     margin-left: 14rem;
+// }
+
+// .p1 {
+//     margin-bottom: 16px;
+// }
+
+// .btn {
+//     display: flex;
+//     justify-content: space-between;
+// }
+
+.container {
+    background-color:  #FEECE2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust this based on your layout preference */
+  }
+  
+  .mat-card {
+    // flex: 0 0 calc(33.33% - 10px); /* Set flex-basis to occupy 33.33% of the container width, adjust margin as needed */
+    margin-bottom: 20px; /* Optional: Add margin between cards */     
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    // flex-direction: row;
+    // width: 300px;
+  
+    justify-content: space-around;
+    margin-bottom: 20px; /* Add margin to create spacing between rows */
+   
+  }
+  
+  .mat-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    width: calc(30% - 10px);/* 33.33% width for each card in a row, minus half of the margin */
+    margin-right: 15px; /* Adjust margin between cards */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  .mat-card:last-child {
+    margin-right: 0; /* Remove margin from the last card to prevent extra space */
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    // border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 890px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: -60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    
+  }
+  
+  .search-container input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
+  .mat-card-content {
+    padding: 16px;
+  }
+  
+  img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+  }
+  
+  h1, h2 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  
+  h2 {
+    margin-left: 14rem;
+  }
+  
+  .p1 {
+    margin-bottom: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+  
+  }
+  
+  .btn {
+    display: flex;
+    justify-content: space-between;
+  }
+  .material-symbols-outlined{
+    padding-left: 5px; 
+    background: white; 
+    padding-top: 7px; 
+    padding-bottom: 6px;
+  }
+
+// .imagebag{
+//   position: absolute;
+//   top: 0;
+//   object-fit: cover;
+//   height: 110%;
+//   width: 100%;
+// }
+
+@media screen and (max-width:600px){
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    justify-content: space-around;
+    margin-bottom: 20px; /* Add margin to create spacing between rows */
+   
+  }
+  .mat-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    width: calc(20% - 10px);/* 33.33% width for each card in a row, minus half of the margin */
+    margin-right: 15px; /* Adjust margin between cards */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  h2 {
+    margin-left: 11rem;
+  }
+  .search-container {
+    display: flex;
+    align-items: center;
+    // border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 2000px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: -20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    
+  }
+  
+}

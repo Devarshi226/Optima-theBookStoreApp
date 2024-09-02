@@ -1,0 +1,41 @@
+
+.row{
+    display: flex;
+    gap: 10px;
+}
+.content{
+    padding-top: 5px;
+}
+.mat-input{
+    width: 50%;
+}
+.title{
+    background-color: #944E63;
+    color: white;
+    font-family: fantasy;
+}
+.btn-cancel{
+    background-color: rgb(235, 43, 56) ;
+    color: white;
+}
+.btn-save{
+    background-color: blue ;
+    color: white;
+}
+.action{
+    padding: 0px 25px 20px;
+}
+.action button{
+    flex: 1;
+}
+.mat-mdc-radio-button ~ .mat-mdc-radio-button {
+    margin-left: 16px;
+  } 
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.file-input {
+    display: none;
+  }

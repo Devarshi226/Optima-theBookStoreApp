@@ -1,0 +1,121 @@
+:host {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 60px 1fr;
+  }
+  
+  app-sidenavbar {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    border-right: 1px solid var(--light-black);
+
+  }
+  
+  app-header {
+    border-bottom: 1px solid var(--light-black);
+    
+  }
+
+
+.main{
+    padding: 22px;
+    background-color: #FEECE2;
+}
+.card-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom-card {
+    flex: 1;
+    margin: 0 20px; /* Adjust margin as needed */
+    height: 200px; /* Set the desired height */
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+span{
+    font-size: 2.5rem;
+}
+.cc1{
+    margin-left: 20px;
+}
+.cc2{
+    display: flex;
+    justify-content: space-between;
+}
+.cc3{
+    display: flex;
+    
+}
+.class-container1{
+    display: flex;
+    justify-content: space-between;
+}
+.custom-card1 {
+    display: flex;
+    flex: 1;
+    margin: 0 20px; /* Adjust margin as needed */
+    height: 350px; /* Set the desired height */
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+img{
+    width: 20px;
+    height: 20px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    
+}
+.social-media{
+    padding-top: 30px;
+    padding-left: 50px;
+    font-size: 22px;
+    font-weight: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.h1 {
+    font-size: 60px;
+}
+
+
+
+@media screen and (max-width:600px){
+    .card-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .custom-card {
+        flex: 1;
+        margin: 0 10px; /* Adjust margin as needed */
+        height: 190px; /* Set the desired height */
+        margin-top: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    }
+    .cc2{
+        display: flex;
+        justify-content: space-between;       
+    }
+    .h1{
+        font-size: 28px ;
+    }
+    span{
+        font-size: 1.5rem;
+    }
+    .class-container1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .mail{
+        margin-bottom: 49px;
+    }
+}
+
+@media screen and (max-width:600px){
+    
+}

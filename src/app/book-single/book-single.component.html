@@ -1,0 +1,27 @@
+
+
+<div class="search-container">
+    <span class="material-symbols-outlined" style="padding-left: 5px; background: white; padding-top: 7px; padding-bottom: 6px;">search </span>
+    <input type="text" [(ngModel)]="term" placeholder="Search...">
+</div>
+
+<div class="container">
+    <div class="card-container">
+       
+        <mat-card class="mat-card" *ngFor="let Post of postData | filter: term ; let i = index">
+            <mat-card-content >
+                <span class="material-symbols-outlined clsbtn" (click)="delete(Post.id)"  *ngIf="Button2" > close </span>
+                <div><img src={{Post.courceImg}} alt="javascript" ></div>
+                <h1 style="text-align: center; font-weight: bold; margin-top: 8px;">{{Post.bname}}</h1>
+                <p class="p1">{{Post.disc}}</p>
+                <h3 class="h3"><b>Author:</b> {{Post.auth}}</h3>
+                <h2 class="h2">Price:{{Post.price}}</h2>
+                
+               <div class="btn"> 
+                <button mat-stroked-button color="primary" *ngIf="Button">Buy Now</button>
+                  
+               </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

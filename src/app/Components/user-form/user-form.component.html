@@ -1,0 +1,83 @@
+<h1 mat-dialog-title class="title">{{ data?'UPDATE USER': 'ADD USER'}}</h1>
+
+<form [formGroup]="studentform">
+    <div mat-dialog-content class="content">
+        <div class="row">
+            <mat-form-field appearance="outline" class="mat-input">
+                <mat-label>Select</mat-label>
+                <mat-select formControlName="department">
+                    <mat-option value="it">IT</mat-option>
+                    <mat-option value="ce">CE</mat-option>
+                    <mat-option value="mech">Mech</mat-option>
+                    <mat-option value="civil">Civil</mat-option>
+                    <mat-option value="auto">Auto Mobile</mat-option>
+                    <mat-option value="phy">Pharmacy</mat-option>
+                   
+                </mat-select>
+                <mat-error> Department is required </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="mat-input">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" type="text" class="form-control" placeholder="Name">
+
+              
+                <mat-error> Name is required </mat-error>
+
+
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline" class="mat-input">
+                <mat-label>Mobile No.</mat-label>
+                <input formControlName="cno" matInput type="number" placeholder="Ex.123">
+                
+                <mat-error>Mobile No. is required </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="mat-input">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" type="email" class="form-control" placeholder="abc@gmail.com">
+              
+                <mat-error> Email is required </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline" class="mat-input">
+                <mat-label>Select DOB</mat-label>
+                <input formControlName="dob" matInput [matDatepicker]="picker" placeholder="Ex. 2/15/2003">
+               
+                <mat-error> Date of Birth is required </mat-error>
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+   
+            <mat-form-field appearance="outline" class="mat-input">
+                <mat-label>Entollment No.</mat-label>
+                <input formControlName="eno" matInput type="number" placeholder="Ex.123">
+            
+                <mat-error> Entollment No. is required </mat-error>
+
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+            <div (drop)="onDrop($event)" (dragover)="onDragOver($event)">
+            <mat-label>Upload Image</mat-label>&nbsp;
+            <label for="">
+                <input type="file" (change)="onFileSelected($event)"  >
+                <img [src]="imgUrl" alt="" height="50px" width="50px" >&nbsp;
+                <!-- <img [src]="imgUrl" alt="" height="100px" width="100px"> -->
+            </label>
+           
+            <mat-hint>or drag and drop here</mat-hint>
+            </div>
+        </div>
+
+       
+    </div>
+    <div mat-dialog-actions style="justify-content: center;" class="action">
+        <button mat-raised-button class="btn-cancel" [mat-dialog-close]="false">CANCEL</button>
+        <button mat-raised-button (click)="onSave()" class="btn-save">{{ data ? 'UPDATE':'ADD USER' }}</button>
+    </div>
+</form>
+

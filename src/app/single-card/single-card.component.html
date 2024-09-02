@@ -1,0 +1,24 @@
+<div class="search-container">
+    <span class="material-symbols-outlined" >search </span>
+    <input type="text" [(ngModel)]="term" placeholder="Search...">
+</div>
+
+<div class="container">
+    <div class="card-container">
+        <mat-card class="mat-card" *ngFor="let Post of postData | filter: term ; let i = index">
+            <mat-card-content >
+                <div><img src={{Post.courceImg}} alt="javascript" style="height: 110%; width: 100%;"></div>
+                <h1 style="text-align: center; font-weight: bold; margin-top: 8px;">{{Post.title}}</h1>
+                <p class="p1">{{Post.disc}}</p>
+                <h2 class="h2">Price:{{Post.price}}</h2>
+               <div class="btn"> 
+                <button mat-stroked-button color="primary" *ngIf="Button">Buy Now</button>
+                <button mat-stroked-button color="primary" [routerLink]="['/','details',Post.id]">Show Details</button> 
+                  <span class="material-symbols-outlined" (click)="delete(Post.id)" style="cursor: pointer;" *ngIf="Button2"> delete </span>
+               </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
+

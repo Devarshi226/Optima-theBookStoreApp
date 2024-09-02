@@ -1,0 +1,24 @@
+<div>
+  <h1 class="heading">OPTIMA</h1><hr>
+  <div>
+        <img [src]=imgUrl class="circular-image">
+        <p style="font-size: larger; font-weight: bold; color: white; text-align: center; margin-top: 15px;">{{username}}</p>
+        <div class="sn1">
+                <span class="material-symbols-outlined" (click)="db()">home</span>
+                <span class="material-symbols-outlined" style="margin: 0 20px 0 20px;">person</span>
+                <span class="material-symbols-outlined">settings</span>
+        </div>
+  </div><br><hr>
+        <div class="snhome">
+                <span class="material-symbols-outlined" style="margin-left: 30px;"> table</span>&nbsp;
+                <h2 mat-raised-button (click)="onHome()" style="margin-left: 40px;">Table</h2>
+        </div>  
+        <div class="snhome">
+                <span class="material-symbols-outlined" style="margin-left: 30px;"> design_services</span>&nbsp;
+                <h2 mat-raised-button (click)="onCourse()" style="margin-left: 40px;">Courses</h2>
+        </div> 
+        <div class="snhome">
+                <span class="material-symbols-outlined" style="margin-left: 30px;">menu_book</span>&nbsp;
+                <h2 mat-raised-button (click)="onBooks()" style="margin-left: 40px;">Books</h2>
+        </div> 
+</div>

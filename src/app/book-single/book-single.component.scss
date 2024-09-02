@@ -1,0 +1,139 @@
+.container {
+    background-color:  #FEECE2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust this based on your layout preference */
+  }
+  
+  // .mat-card {
+  //   flex: 0 0 calc(33.33% - 10px); /* Set flex-basis to occupy 33.33% of the container width, adjust margin as needed */
+  //   margin-bottom: 20px; /* Optional: Add margin between cards */     
+  // }
+  .card-container {
+    display: flex;
+    // flex-wrap: wrap;
+    // flex-direction: row;
+    // width: 300px;
+    margin-right: 10px;
+    margin-left: 10px;
+    justify-content: space-around;
+    margin-bottom: 20px; /* Add margin to create spacing between rows */
+   
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    // border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 1100px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: -60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  .search-container input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
+  .mat-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    width: calc(30% - 10px);
+    margin-right: 15px; 
+    box-sizing: border-box; 
+  }
+  
+  .mat-card:last-child {
+    margin-right: 0; 
+  }
+  
+  
+  .mat-card-content {
+    padding: 16px;
+  }
+  
+  img {
+    // border-top-left-radius: 10px;
+    // border-top-right-radius: 10px;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 400px;
+    width: 100%;
+  }
+  
+  h1, h2 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  
+  h2 {
+    margin-left: 13rem;
+  }
+  
+  .p1 {
+    margin-bottom: 16px;
+    // overflow: hidden;
+    // text-overflow: ellipsis; 
+    // white-space: nowrap; 
+  
+  }
+  
+  .btn {
+    display: flex;
+    justify-content: space-between;
+   
+  }
+  .clsbtn{
+    cursor: pointer; 
+    margin-left: 280px;
+  }
+  
+  @media screen and (max-width:600px){
+    .search-container {
+      display: flex;
+      align-items: center;
+      // border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-right: 2000px;
+      margin-left: 20px;
+      margin-bottom: 10px;
+      margin-top: -20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+      
+    }
+    .mat-card {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      justify-content: space-between;
+      width: calc(20% - 10px);
+      margin-left: 70px;
+      box-sizing: border-box; 
+      margin-top: 20px;
+    }
+    .card-container {
+      display: flex;
+      // flex-wrap: wrap;
+      flex-direction: column;
+      // width: 300px;
+      margin-right: 10px;
+      margin-left: 10px;
+      justify-content: space-between;
+      margin-bottom: 20px; /* Add margin to create spacing between rows */
+     
+    }
+    .clsbtn{
+      cursor: pointer; 
+      margin-left: 320px;
+    }
+    h2 {
+      margin-left: 15rem;
+    }
+    
+  }

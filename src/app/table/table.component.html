@@ -1,0 +1,109 @@
+<app-header></app-header>
+<app-sidenavbar></app-sidenavbar>
+
+<main>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <div class="main">
+
+    <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" loadingText="Loading..." type="ball-atom">
+    </ngx-spinner>
+
+    <!-- <app-header></app-header> -->
+    <div>
+      <div class="container">
+        <div class="row">
+
+          <div class="tb1">
+            <mat-form-field class="search">
+              <mat-label>Filter</mat-label>
+              <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+            </mat-form-field>&nbsp;
+            <button mat-raised-button (click)="Onsubmit()" class="btn">Add User</button>&nbsp;
+
+          </div>
+
+          <div class="mat-elevation-z8">
+            <table class="table1" mat-table [dataSource]="dataSource" matSort>
+
+              <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="Theader"> ID
+                </th>
+                <td mat-cell *matCellDef="let i=index"> {{i+1}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="department">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="Theader">
+                  Department </th>
+                <td mat-cell *matCellDef="let row"> {{row.department | titlecase | uppercase}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="Theader"> Name
+                </th>
+                <td mat-cell *matCellDef="let row"> {{row.name | uppercase}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="cno">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="Theader">
+                  Contact No. </th>
+                <td mat-cell *matCellDef="let row"> {{row.cno }} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="email">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="Theader"> Email
+                </th>
+                <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="dob">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="Theader"> DOB
+                </th>
+                <td mat-cell *matCellDef="let row"> {{row.dob | date}} </td>
+              </ng-container>
+
+
+              <ng-container matColumnDef="eno">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="Theader">
+                  Enrollment No. </th>
+                <td mat-cell *matCellDef="let row"> {{row.eno}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="image">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="Theader"> Image
+                </th>
+                <td mat-cell *matCellDef="let row"><img src="{{row.img}}" height="100px" width="100px"></td>
+              </ng-container>
+
+
+              <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="Theader">Action
+                </th>
+                <td mat-cell *matCellDef="let row" style="display: flex;">
+
+                  <button (click)="onEdit(row)" mat-icon-button color="primary">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                  <button (click)="onDelete(row.id)" mat-icon-button color="warn">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+              <tr class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="spin">
+      <mat-spinner diameter="50" *ngIf="!showSpinner" color="accent"></mat-spinner>
+    </div>
+
+  </div>
+</main>

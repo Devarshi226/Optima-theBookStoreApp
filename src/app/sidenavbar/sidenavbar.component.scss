@@ -1,0 +1,81 @@
+:host {
+    display: block;
+    width: 250px;
+    height: 100%;
+    // padding: 0.5rem;
+    overflow: hidden;
+    background-color: #E2BFB3;
+}
+.heading{
+    font-size: 35px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 15px;
+    text-decoration: underline;
+}
+.circular-image {
+    width: 90px; /* Adjust size as needed */
+    height: 90px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    margin-top: 20px;
+    margin-left: 85px;
+    margin-right: auto;
+}
+.sn1{
+    color: white;
+    margin-top: 20px;
+    display: flex;
+    justify-content:center;
+    cursor: pointer;
+}
+.material-symbols-outlined:hover{
+    color: brown;
+  }
+.snhome{
+    color: white;
+    margin-top: 30px;
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+}
+.snhome:hover{
+    color: brown;
+  }
+
+//   @media (max-width: 768px) {
+//     :host {
+//       width: 70%;
+//     //   padding: 0.3rem;
+//     }
+    
+//     .circular-image {
+//       margin-top: 20px;
+//       margin-left:50px ;
+      
+//     }
+  
+//     .sn1,
+//     .snhome {
+//       margin-top: 15px;
+//     }
+//   }
+  
+//   @media (max-width: 576px) {
+//     .heading {
+//       font-size: 25px;
+//     }
+  
+//     .circular-image {
+//       width: 70px;
+//       height: 70px;
+//       margin-left: 50px;
+//     }
+  
+//     .sn1,
+//     .snhome {
+//       margin-top: 10px;
+//     }
+//   }  

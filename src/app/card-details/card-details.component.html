@@ -1,0 +1,25 @@
+<div class="back-btn">
+  <span class="material-symbols-outlined" (click)="back()">arrow_back</span>
+</div>
+
+<div><img [src]="carddata.courceImg" alt="imgae"></div>
+
+<div>
+  <h1>{{carddata.title}}</h1>
+</div>
+<div class="div1">
+  <h3><b>Author:</b> {{carddata.auth}}</h3>
+  <h3 class="h3"><b>Duration:</b> {{carddata.duration}}</h3>
+  <h3><b>Type:</b> {{carddata.type}}</h3>
+  
+</div>
+<h2 class="h2">Price: {{ carddata.price }}</h2>
+<p class="p1">{{ carddata.disc }}</p>
+
+
+
+
+<div class="btn">
+  <button mat-stroked-button color="primary" class="btn" *ngIf="Button">Buy Now</button>
+  
+</div>

@@ -1,0 +1,48 @@
+<h1 mat-dialog-title class="title"
+    style="text-align: center; background-color: brown; color: white; font-family: fantasy;">ADD COURSE</h1>
+
+<form [formGroup]="coursform" (submit)="OnSave()">
+    <div mat-dialog-content class="content">
+        <div class="col" style="display:grid;">
+            <!-- Title, Description, and Price form fields -->
+            <mat-form-field appearance="outline" class="mat-input">
+                <mat-label>Title</mat-label>
+                <input matInput formControlName="title" type="text" class="form-control" placeholder="Title">
+            </mat-form-field><br>
+            <mat-form-field appearance="outline" class="mat-input">
+                <mat-label>Discription</mat-label>
+                <input matInput formControlName="disc" type="text" class="form-control" placeholder="Discription">
+            </mat-form-field><br>
+            <mat-form-field appearance="outline" class="mat-input">
+                <mat-label>Price</mat-label>
+                <input matInput formControlName="price" type="text" class="form-control" placeholder="Price">
+            </mat-form-field><br>
+            <mat-form-field appearance="outline" class="mat-input">
+                <mat-label>Author</mat-label>
+                <input matInput formControlName="auth" type="text" class="form-control" placeholder="Author">
+            </mat-form-field><br>
+           <div class="row">
+            <mat-form-field appearance="outline" class="mat-input">
+                <mat-label>Duration</mat-label>
+                <input matInput formControlName="duration" type="text" class="form-control" placeholder="Duration">
+            </mat-form-field><br>
+            <mat-form-field appearance="outline" class="mat-input">
+                <mat-label>Type</mat-label>
+                <input matInput formControlName="type" type="text" class="form-control" placeholder="Type">
+            </mat-form-field><br>
+           </div>
+        </div>
+        <div class="row">
+            <div (drop)="onDrop($event)" (dragover)="onDragOver($event)">
+                <mat-label>Upload Image</mat-label>&nbsp;
+                <input type="file" (change)="onFileSelected($event)" id="fileInput" class="form-control">
+                <img [src]="imgUrl" alt="" height="50px" width="50px">&nbsp;
+                <mat-hint>or drag and drop here</mat-hint>
+            </div>
+        </div>
+    </div>
+    <div mat-dialog-actions style="justify-content: center;" class="action">
+        <button mat-raised-button class="btn-cancel" [mat-dialog-close]="false">CANCEL</button>
+        <button mat-raised-button type="submit" class="btn-save">ADD COURSE</button>
+    </div>
+</form>

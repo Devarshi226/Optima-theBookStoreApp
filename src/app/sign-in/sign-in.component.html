@@ -1,0 +1,106 @@
+
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form class="login" [formGroup]="signinform" (submit)="signIn()">
+				<h1 class="header">Sign in</h1>
+				<div class="login__field">
+                    <i class="login__icon fas fa-user"></i>
+                    <input type="text" class="login__input"  placeholder="First Name" formControlName="firstname">
+					<div class="alert alert-danger" *ngIf="f['firstname'].invalid && f['firstname'].touched">
+						<div *ngIf="f['firstname'].errors && f['firstname'].errors['required']">
+							 FirstName Is required
+						</div>
+					 </div>
+                </div>
+                <div class="login__field">
+                    <i class="login__icon fas fa-user"></i>
+                    <input type="text" class="login__input" placeholder="Last Name" formControlName="lastname">
+					<div class="alert alert-danger" *ngIf="f['lastname'].invalid && f['lastname'].touched">
+						<div *ngIf="f['lastname'].errors && f['lastname'].errors['required']">
+							 LastName Is required
+						</div>
+					 </div>
+                </div>
+				<div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input type="text" class="login__input" placeholder="User name" formControlName="username">
+					<div class="alert alert-danger" *ngIf="f['username'].invalid && f['username'].touched">
+						<div *ngIf="f['username'].errors && f['username'].errors['required']">
+							 UserName Is required
+						</div>
+						<div *ngIf="f['username'].errors && f['username'].errors['minlength']">
+							2 Character required
+					   </div>
+					 </div>
+				
+				</div>
+				<div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+					<input type="password" class="login__input" placeholder="Password" formControlName="password">
+					<!-- <div class="alert alert-danger" *ngIf="f['password'].invalid && f['password'].touched">
+						<div *ngIf="f['password'].errors && f['password'].errors['required']">
+							 Password Is required
+						</div>
+						<div *ngIf="f['password'].errors && f['password'].errors['minlength']">
+							Password must be at least 8 characters long
+					   </div>
+					   <div *ngIf="f['password'].value && f['password'].value.indexOf(' ') !== -1" class="text-danger">
+						<b>Password cannot contain spaces</b>
+					 </div>
+					   <div *ngIf="f['password'].errors && f['password'].errors['pattern'] && f['password'].touched">
+						   Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character
+				       </div>
+					 </div> -->
+				</div>
+				<div class="login__field">
+                    <i class="login__icon fas fa-envelope"></i>
+                    <input type="email" class="login__input" [class.is-invalid]="f['email'].invalid && f['email'].touched" placeholder="Email" formControlName="email">
+					<div class="alert alert-danger" *ngIf="f['email'].invalid && f['email'].touched">
+						<div *ngIf="f['email'].errors && f['email'].errors['required']">
+							 Email Is required
+						</div>
+						<div *ngIf="f['email'].errors && f['email'].errors['pattern']">
+							 Invalid Email
+					    </div>
+					 </div>
+		
+                </div>
+				<div class="login__field">
+                    <i class="login__icon fas fa-phone"></i>
+                    <input type="text" class="login__input" placeholder="Contact No." formControlName="contactno">
+					<div class="alert alert-danger" *ngIf="f['contactno'].invalid && f['contactno'].touched">
+					<div *ngIf="f['contactno'].errors && f['contactno'].errors['required']">
+						Contact No. Is required
+				   </div>
+				   <div *ngIf="f['contactno'].errors && f['contactno'].errors['pattern']">
+						Enter Correct Contact No.
+				   </div>
+				</div>
+				<div class="login__field">
+					<i class="login__icon fas fa-users"></i>
+					<select class="login__input" formControlName="role">
+					  <option value="user">User</option>
+					  <option value="admin">Admin</option>
+					</select>
+				  </div>
+            </div>
+				
+				<button class="button login__submit" type="submit" [disabled]="signinform.valid">
+					<span class="button__text">Sign In Now</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button><br><br>
+				<p>Already have an account? <a routerLink="/login" style="color: white;">Login</a></p>				
+			</form>
+			
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>
+
+   

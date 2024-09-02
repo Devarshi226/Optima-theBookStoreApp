@@ -1,0 +1,12 @@
+<app-header ></app-header>
+<app-sidenavbar></app-sidenavbar>
+<main>
+    <div class="container">
+        <div class="header1"><h1 class="h1first">All Books</h1>
+            <div class="jay">
+                <button mat-raised-button (click)="onSubmit()" class="btn1" *ngIf="Button2">Add Books</button>
+            </div>
+        </div>
+        <app-book-single [postData]="bookData"></app-book-single>
+    </div>
+</main>

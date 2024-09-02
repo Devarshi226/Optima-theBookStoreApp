@@ -1,0 +1,67 @@
+<app-header ></app-header>
+<app-sidenavbar></app-sidenavbar>
+
+
+<main>
+    <div class="container">
+        
+        <div class="header1">
+            <h1 class="h1first">All Courses</h1>
+           
+                
+                <div  class="jay">
+                    <!-- <div class="search-container">
+                        <span class="material-symbols-outlined" style="padding-left: 5px; background: white; padding-top: 7px; padding-bottom: 6px;">search </span>
+                        <input type="text" placeholder="Search..."></div> -->
+                    <button mat-raised-button (click)="onSubmit()" class="btn1" *ngIf="Button2">Add Courses</button>
+                </div>
+           
+           
+            </div>
+          
+            
+            <!-- <div  class="card-container">
+                <mat-card class="mat-card" >
+                    <mat-card-content >
+                        <div><img src="./assets/js.jpg" alt="javascript" style="height: 110%; width: 100%;"></div>
+                        <h1 style="text-align: center; font-weight: bold; margin-top: 8px;">Javascript for Beginners</h1>
+                        <p class="p1">In this course you will learn the fundamentals of Javascript. This Course is purely designed for beginners and teaches you all the basic concepts of JavaScript step by step.</p>
+                        <h2 class="h2">Price:0$</h2>
+                        <div class="btn"> 
+                        <button mat-stroked-button color="primary">Buy Now</button>
+                        <button mat-stroked-button color="primary" (click)="showDetails()"> Show Details</button>
+                       </div>
+                    </mat-card-content>
+                </mat-card>
+                <mat-card class="mat-card">
+                    <mat-card-content>
+                        <div><img src="./assets/angu.jpg" alt="angular" style="height: 110%; width: 100%;"></div>
+                        <h1 style="text-align: center; font-weight: bold; margin-top: 8px;">Angular for Beginners</h1>
+                        <p class="p1">In this course you will learn the fundamentals of Angular. This Course is purely designed for beginners and teaches you all the basic concepts of Angular step by step.</p>
+                        <h2 class="h2">Price:0$</h2>
+                        <div class="btn"> 
+                        <button mat-stroked-button color="primary">Buy Now</button>
+                        <button mat-stroked-button color="primary">Show Details</button>
+                       </div>
+                    </mat-card-content>
+                </mat-card>
+                <mat-card class="mat-card">
+                    <mat-card-content>
+                        <div><img src="./assets/react.jpg" alt="react" style="height: 110%; width: 100%;"></div>
+                        <h1 style="text-align: center; font-weight: bold; margin-top: 8px;">React for Beginners</h1>
+                        <p class="p1">In this course you will learn the fundamentals of Javascript. This Course is purely designed for beginners and teaches you all the basic concepts of React step by step.</p>
+                        <h2 class="h2">Price:0$</h2>
+                        <div class="btn"> 
+                        <button mat-stroked-button color="primary">Buy Now</button>
+                        <button mat-stroked-button color="primary">Show Details</button>
+                       </div>
+                    </mat-card-content>
+                </mat-card>
+            </div> -->
+                <app-single-card [postData]="courseData"></app-single-card>
+            
+      
+              
+            
+    </div>
+</main>

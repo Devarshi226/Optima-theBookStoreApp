@@ -1,0 +1,116 @@
+:host {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 60px 1fr;
+  }
+  
+  app-sidenavbar {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    border-right: 1px solid var(--light-black);
+  }
+  
+  app-header {
+    border-bottom: 1px solid var(--light-black);  
+  }
+
+  main {
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+    background-color:  #FEECE2;
+  }
+  // .container{
+  //   background-color:  #FEECE2;
+  //   width: 100%;
+  // }
+  .search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 890px;
+    margin-left: 20px;
+    
+  }
+  
+  .search-container input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
+
+  .h1first{
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+  }
+  .header1{
+    // display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+.btn1{
+    margin-left: 88%;
+    width: 10%;
+  }
+
+.container {
+  display: flex;
+  flex: 0 0 calc(33.33% - 10px);
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust this based on your layout preference */
+}
+
+// .mat-card {
+//   flex: 0 0 calc(33.33% - 10px); /* Set flex-basis to occupy 33.33% of the container width, adjust margin as needed */
+//   margin-bottom: 20px; /* Optional: Add margin between cards */
+
+   
+// }
+
+
+.card-container {
+  display: flex;
+  // flex-direction: row;
+  // width: 300px;
+
+  justify-content: space-around;
+  margin-bottom: 20px; /* Add margin to create spacing between rows */
+ 
+}
+.jay{
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width:600px){
+  .jay{
+    margin-bottom: 30px;
+    margin-right: 20px;
+  }
+  // .card-container {
+  //   display: flex;
+  //   flex-direction: column;
+  //   margin-left: 280px;
+  //   justify-content: space-around;
+  //   margin-bottom: 20px; 
+   
+  // }
+  // .mat-card {
+  //   border-radius: 10px;
+  //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  //   justify-content: space-between;
+  //   width: calc(60% - 10px);  
+  //   margin-right: 15px;
+  //   box-sizing: border-box; 
+  // }
+  // h2 {
+  //   margin-left: 11rem;
+  // }
+ 
+}
+
